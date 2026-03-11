@@ -1,0 +1,4 @@
+{
+    "github.copilot.chat.cloudAgent.enabled": false,
+    "editor.acceptSuggestionOnCommitCharacter": true
+}

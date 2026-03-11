@@ -1,0 +1,6 @@
+<div>
+  <h3>{{ name }}</h3>
+  <button (click)="onSave()">Save</button>
+  <button (click)="onClickButton()">Click Me</button>
+  <div class="success-message" *ngIf="showSuccessMessage">✓ {{ message }}</div>
+</div>
