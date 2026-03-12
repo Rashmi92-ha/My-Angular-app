@@ -1,0 +1,12 @@
+<div>
+  <h2>User form</h2>
+  <form (ngSubmit)="onSubmit()">
+    <label>name:</label>
+    <input type="text" [(ngModel)]="userName" name="UserName" />
+    <br /><br />
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="emailId" name="email" />
+    <br /><br />
+    <button type="submit">Submit</button>
+  </form>
+</div>

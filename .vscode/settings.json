@@ -1,4 +1,7 @@
 {
-    "github.copilot.chat.cloudAgent.enabled": false,
-    "editor.acceptSuggestionOnCommitCharacter": true
+    "github.copilot.chat.cloudAgent.enabled": true,
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "workbench.commandPalette.experimental.suggestCommands": true,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "github.copilot.chat.claudeAgent.enabled": true,
 }
