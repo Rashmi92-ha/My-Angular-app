@@ -10,3 +10,78 @@
     <button type="submit">Submit</button>
   </form>
 </div>
+<div>
+  <h2>User Regestration</h2>
+  <form #userForm="ngForm" (ngSubmit)="onClick(userForm)">
+    <label>Name : </label>
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="name"
+      required
+      minlength="3"
+      #ref="ngModel"
+      [class.invalid]="ref.invalid && ref.touched"
+    />
+    <div *ngIf="ref.invalid && ref.touched">
+      <small *ngIf="ref.errors?.['required']">name is required</small>
+      <small *ngIf="ref.errors?.['minlength']"
+        >Name must atleast 3 character</small
+      >
+    </div>
+    <br /><br />
+    <label>email : </label>
+    <input
+      type="email"
+      name="email"
+      [(ngModel)]="mail"
+      required
+      email
+      #refemail="ngModel"
+      [class.invalid]="refemail.invalid && refemail.touched"
+    />
+    <div *ngIf="refemail.invalid && refemail.touched">
+      <small *ngIf="refemail.errors?.['required']">email is required</small>
+      <small *ngIf="refemail.errors?.['email']">enter a valid email</small>
+    </div>
+    <br /><br />
+    <label>phone :</label>
+    <input
+      type="tel"
+      name="phoneNumber"
+      [(ngModel)]="phone"
+      required
+      pattren="^[0-9]{10}$"
+      #phoneref="ngModel"
+      [class.invalid]="phoneref.invalid && phoneref.touched"
+    />
+    <div *ngIf="phoneref.invalid && phoneref.touched">
+      <small *ngIf="phoneref.errors?.['required']">phone no is required</small>
+      <small *ngIf="phoneref.errors?.['pattren']"
+        >enter a valid 10 digit number</small
+      >
+    </div>
+    <br /><br />
+    <label>password :</label>
+    <input
+      type="password"
+      name="password"
+      [(ngModel)]="password"
+      required
+      minlength="6"
+      #refpass="ngModel"
+      [class.invalid]="refpass.invalid && refpass.touched"
+    />
+    <div *ngIf="refpass.invalid && refpass.touched">
+      <small *ngIf="refpass.errors?.['required']"> password is required </small>
+      <small *ngIf="refpass.errors?.['minlength']"
+        >enter a valid password</small
+      >
+    </div>
+    <br />
+    <br />
+    <button class="userForm" type="submit" [disabled]="userForm.invalid">
+      Submit
+    </button>
+  </form>
+</div>
