@@ -1,0 +1,18 @@
+<form [formGroup]="userForm">
+    <h2>Reactive User form</h2>
+  <div>
+    <label> Name </label>
+    <input type="text" formControlName="name">
+    <br><br>
+    <label> Email </label>
+    <input type="email" formControlName="email">
+    <br><br>
+    <label> Phone </label>
+    <input type="tel" formControlName="phone">
+    <br><br>
+    <label> Password </label>
+    <input type="password" formControlName="password"> 
+</div>
+</form>
+<br>
+<button (click)="onSubmit()">submit</button>
