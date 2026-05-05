@@ -7,6 +7,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { UserFormsComponent } from './user-forms/user-forms.component';
 import { ReactiveFormsComponent} from './reactive-forms/reactive-forms.component';
+import {UserDataComponent} from './user-data/user-data.component';
 @NgModule({
   declarations: [
     MainComponent,
@@ -14,6 +15,7 @@ import { ReactiveFormsComponent} from './reactive-forms/reactive-forms.component
     ChildComponent,
     UserFormsComponent,
     ReactiveFormsComponent,
+    UserDataComponent,
   ],
   imports: [BrowserModule, FormsModule,ReactiveFormsModule],
   providers: [],

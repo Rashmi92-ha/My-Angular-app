@@ -4,4 +4,5 @@
     "workbench.commandPalette.experimental.suggestCommands": true,
     "editor.inlineSuggest.suppressSuggestions": true,
     "github.copilot.chat.claudeAgent.enabled": true,
+    "angular.suggest.autoImports": false,
 }
