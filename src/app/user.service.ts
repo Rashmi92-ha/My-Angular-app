@@ -13,4 +13,9 @@ export class UserService {
   getHttp() {
     return this.httpClient.get('https://jsonplaceholder.typicode.com/users');
   }
+  addUsers(data: any){
+    return this.httpClient.post('https://jsonplaceholder.typicode.com/users',
+      data
+    )
+  }
 }
