@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
+import { User } from '../user';
 @Component({
   selector: 'app-user-data',
   templateUrl: './user-data.component.html',
@@ -7,7 +8,8 @@ import { UserService } from '../user.service';
 })
 export class UserDataComponent {
   users: string[] = [];
-  httpUser: any;
+  httpUser: User[] = [];
+
   constructor(private userService: UserService) {}
 
   ngOnInit() {
