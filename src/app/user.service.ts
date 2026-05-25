@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root',
@@ -10,8 +12,8 @@ export class UserService {
   getUsers() {
     return this.users;
   }
-  getHttp() {
-    return this.httpClient.get('https://jsonplaceholder.typicode.com/users');
+  getHttp(): Observable<User[]> {
+    return this.httpClient.get<User[]>('https://jsonplaceholder.typicode.com/users');
   }
   addUsers(data: any){
     return this.httpClient.post('https://jsonplaceholder.typicode.com/users',
