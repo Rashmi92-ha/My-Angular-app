@@ -9,13 +9,19 @@ import { User } from '../user';
 export class UserDataComponent {
   users: string[] = [];
   httpUser: User[] = [];
+  errorMessage: string = '';
 
   constructor(private userService: UserService) {}
 
   ngOnInit() {
     this.users = this.userService.getUsers();
-    this.userService.getHttp().subscribe((data) => {
-      this.httpUser = data;
+    this.userService.getHttp().subscribe({
+      next: (data: User[]) => {
+        this.httpUser = data;
+      },
+      error: (error) => {
+        this.errorMessage = 'Failed to load users ❌';
+      },
     });
   }
 }
