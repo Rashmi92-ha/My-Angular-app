@@ -9,6 +9,8 @@ import { UserFormsComponent } from './user-forms/user-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { UserDataComponent } from './user-data/user-data.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
 @NgModule({
   declarations: [
     MainComponent,
@@ -18,7 +20,13 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsComponent,
     UserDataComponent,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes),
+  ],
   providers: [],
   bootstrap: [MainComponent],
 })
